@@ -1,0 +1,27 @@
+<div class="" data-ng-controller="ScrapController">
+	<h1>Scrap Page</h1>
+	<div class='row'>
+		<div class="col-lg-6">
+			<form data-ng-submit="scrap()">
+				<label>URL:</label>
+				<input data-ng-model="url" name='url' type='text' value="URL">
+				<label>Tipo Codif.:</label>
+				<select data-ng-model='codif' name='codif'>
+					<option selected="selected" value="utf-8">UTF-8</option>
+					<option value="utf-16">UTF-16</option>
+					<option value="ISO-8859-1">ISO 8859-1</option>
+
+				</select>
+				<input type="submit" id="submit" value="Submit" />
+			</form>	
+		</div>
+		<div class="col-lg-6">
+			<div data-ng-show='isSuccess' id='download'></div>
+			<p data-ng-show='!isSuccess'>
+				{{err}}
+			</p>
+		</div>
+	</div>
+
+</div>
+
